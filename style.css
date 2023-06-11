@@ -1,0 +1,153 @@
+.page-wrapper{
+    margin: 0 8% 0 8%;
+}
+
+.header-container-LandingPage {
+    margin-top: 100px;
+    
+}
+.header-container-HomePage{
+    display: flex;
+    justify-content: space-around;
+}
+.logo img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+.logo-slogane-container{
+    display: block;
+    text-align: center;
+}
+  /* ^^^  End of Header styling  ^^^ */ */
+
+   .Menu {
+    background-color: #f9f9f9;
+  }
+  
+ nav.Menu {
+    margin:50px 30px 50px 30px;
+    background-color: #f9f9f9;
+    padding: 10px 0;
+
+}
+  .menu-options {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+  }
+  
+  .options-hover{
+    width: 170px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+   position: relative;
+  }
+
+   #dropdown-toggle {
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  #dropdown-options {
+    display: none;
+    margin-left: 10px;
+    list-style: none;
+    padding: 0;
+    width: 170px;
+    border: 1px solid black;
+    flex-direction: column;
+    position: absolute;
+    top: -300%;
+    left: 20%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .dropdown.show #dropdown-toggle {
+    transform: translateX(-50%);
+    display: block;
+  }
+  
+  .dropdown.show #dropdown-options {
+    transform: translateX(0);
+    display: block;
+  }
+  
+  
+
+/* ^^^   End of Menu styling ^^^ */
+
+  .contentTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .content-LeftSide {
+    flex: 1;
+  }
+  .content-RightSide {
+    flex: 2;
+  }
+.content-RightSide img{
+    width: 240px;
+    height: 240px;
+}
+.content-RightSide{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+/* ^^^  End of Content styling ^^^ */
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .LegalStuff ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .LegalStuff ul li{
+    margin: 12px;
+  }
+  .CopyrightAndLogo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-logo img {
+    max-width: 40px;
+    height: auto;
+  }
+  
+  .footer-copyright {
+    text-align: right;
+    margin: 15px;
+  }
+  
