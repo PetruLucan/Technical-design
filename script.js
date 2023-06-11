@@ -37,3 +37,13 @@ document.addEventListener('click', function(event) {
   }
 });
 
+
+const contentSection = document.getElementById('content-section');
+const contactSection = document.getElementById('contact-section');
+const contactLink = document.getElementById('contact-link');
+
+contactLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    contentSection.style.display = 'none';
+    contactSection.style.display = 'block';
+});

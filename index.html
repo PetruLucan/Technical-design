@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
  <div class="page-wrapper">
@@ -57,13 +58,13 @@
                             </ul>
                         </li>
                         <li class="options-hover">
-                            <a href="contact" title="Contact">Contact</a>
+                            <a href="#contact-section" id="contact-link" title="Contact">Contact</a>
                         </li>
                     </ul>
                 </div>
         </div>
     </nav>
-     <section class="'Content">
+     <section id='content-section' class="Content">
         <h1 class="contentTitle">Proiectare Mecanica</h1>
 
         <div class="content-container">
@@ -88,6 +89,93 @@
             </div>
         </div>
      </section>
+     <section id='contact-section' class='Contact' style='display:none;'>
+        <h1>Contact</h1>
+        <div class="contact-container">
+            <div class="contact-LeftSide">
+                <p>
+                    <strong>Technical Design</strong>
+                    <br>
+                    " Cartier Dacia, iasi"
+                    <br>
+                    " C.U.I:  RO16062379; O.R.C.: J29/115/2004"
+                </p>
+                <p> &nbsp;</p>
+                <p>
+                    <strong>Relatii Clienti:</strong>
+                </p>
+                <p>
+                    "Tel : "
+                    <strong> 027384374823</strong>
+                </p>
+                <p>
+                    " Cel : "
+                    <strong>=982734982</strong>
+                </p>
+                <p>
+                    <strong>
+                        E-mail:
+                    </strong>
+                    <span>
+                        <a href="mailto:info@tddesign.ro">info@tddesign.ro</a>
+                    </span>
+                </p>
+                <p>
+                    <strong>
+                        Web:
+                    </strong>
+                    <span>
+                        <a href="https://petrulucan.github.io/Technical-design/">technical-design.ro</a>
+                    </span>
+                </p>
+            </div>
+            <div class="contact-RightSide">
+                <div class="form-item">
+                </div>
+                <label class="form-label" for="edit-submitted-nume-prenume">Nume prenume <span class="form-required" title="This field is required.">*</span></label>
+                </label>
+                <input>
+    
+                <div class="form-item">
+                </div>
+                <label class="form-label" for="edit-submitted-telefon">Telefon <span class="form-required" title="This field is required.">*</span></label>
+                </label>
+                <input>
+    
+                <div class="form-item">
+                </div>
+                <label class="form-label" for="edit-submitted-e-mail">E-mail <span class="form-required" title="This field is required.">*</span></label>
+                </label>
+                <input>
+                
+                <div class="form-item">
+                </div>
+                <label class="form-label" for="edit-submitted-mesaj">Mesaj <span class="form-required" title="This field is required.">*</span></label>
+                <textarea></textarea>
+
+            </div>
+        </div>
+       
+        <div class="form-info">
+            <p><span style="color:#0099cc"><em>* Campurile marcate cu * sunt obligatorii!</em></span></p>
+            <p><em>Prin completarea adresei de e-mail, numelui prenumelui si telefonului va exprimati acordul ca acestea sa fie incluse in baza de date a SC Technical Documentation Design SRL​.</em></p>
+            <p><em>Scopul stocarii adresei de email, numelui si prenumelui, telefonului este acela de a da curs solicitarii dumneavoastra.</em></p>
+            </div>
+        <div class="form-type-checkbox checkbox"> 
+            <label class="control-label" for="edit-gdpr-form-compliance">
+                <input type="checkbox" id="edit-gdpr-form-compliance" name="gdpr_form_compliance" value="1" class="form-checkbox required">
+                Am citit si sunt de acord cu <a href="/ro/politica-confidentialitate" target="_blank">Politica de confidentialitate</a>. 
+                <span class="form-required" title="This field is required.">*</span>
+            </label>
+        </div>
+        <div class="captcha"><input type="hidden" name="captcha_sid" value="71931">
+            <input type="hidden" name="captcha_token" value="1ae6b6447ea2e722bdfe91f7dd9f2505">
+            <input type="hidden" name="captcha_response" value="Google no captcha">
+            <!-- <div class="g-recaptcha" data-sitekey="6LcXEKUUAAAAAE3SFsPN73wd23s_ApaaBcIKSqJv" data-theme="light" data-type="image"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcXEKUUAAAAAE3SFsPN73wd23s_ApaaBcIKSqJv&amp;co=aHR0cHM6Ly93d3cudGRkZXNpZ24ucm86NDQz&amp;hl=ro&amp;type=image&amp;v=Xh5Zjh8Od10-SgxpI_tcSnHR&amp;theme=light&amp;size=normal&amp;cb=k2wki8xfatq1" width="304" height="78" role="presentation" name="a-v4xbwq1g8939" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></div> -->
+            <!-- <div class="g-recaptcha" data-sitekey="6LcDDYsmAAAAALtzsdczAqZoTW0oAJBAbEVLP0c4" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcXEKUUAAAAAE3SFsPN73wd23s_ApaaBcIKSqJv&amp;co=aHR0cHM6Ly93d3cudGRkZXNpZ24ucm86NDQz&amp;hl=ro&amp;type=image&amp;v=Xh5Zjh8Od10-SgxpI_tcSnHR&amp;theme=light&amp;size=normal&amp;cb=k2wki8xfatq1"></div> -->
+        <div class="form-actions"><button class="webform-submit button-primary btn btn-default form-submit" type="submit" name="op" value="Trimite">Trimite</button>
+            </div>
+        </section>
      <footer>
         <div class="footer-container">
             <div class="LegalStuff">

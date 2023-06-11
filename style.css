@@ -107,7 +107,57 @@
     flex-direction: row;
 }
 
-/* ^^^  End of Content styling ^^^ */
+/* ^^^  End of Section Content styling ^^^ */
+
+
+
+.contact-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contact-LeftSide {
+  flex: 1;
+}
+.contact-RightSide {
+  flex: 2;
+}
+
+.contact-RightSide input {
+  display: block;
+    width: 75%;
+    height: 34px;
+    resize: none; 
+    overflow:scroll;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 0 10px 0;
+}
+.contact-RightSide textarea {
+  display: block;
+    width: 75%;
+    height: 90px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 0 10px 0;
+}
+
+
+
+
+
+/* ^^^^  End of Section Contact styiling ^^^^ */
 
 footer {
     display: flex;
