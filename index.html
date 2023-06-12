@@ -3,6 +3,11 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("contact-section").submit();
+       }
+     </script>
 </head>
 <body>
  <div class="page-wrapper">
@@ -171,9 +176,13 @@
         <div class="captcha"><input type="hidden" name="captcha_sid" value="71931">
             <input type="hidden" name="captcha_token" value="1ae6b6447ea2e722bdfe91f7dd9f2505">
             <input type="hidden" name="captcha_response" value="Google no captcha">
+
+            <button class="g-recaptcha" data-sitekey="6LdJR40mAAAAAFWPfx7Tcc-iGL21ksoiQmTamPPP" data-callback="onSubmit">Submit</button>
+
             <!-- <div class="g-recaptcha" data-sitekey="6LcXEKUUAAAAAE3SFsPN73wd23s_ApaaBcIKSqJv" data-theme="light" data-type="image"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcXEKUUAAAAAE3SFsPN73wd23s_ApaaBcIKSqJv&amp;co=aHR0cHM6Ly93d3cudGRkZXNpZ24ucm86NDQz&amp;hl=ro&amp;type=image&amp;v=Xh5Zjh8Od10-SgxpI_tcSnHR&amp;theme=light&amp;size=normal&amp;cb=k2wki8xfatq1" width="304" height="78" role="presentation" name="a-v4xbwq1g8939" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></div> -->
             <!-- <div class="g-recaptcha" data-sitekey="6LcDDYsmAAAAALtzsdczAqZoTW0oAJBAbEVLP0c4" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcXEKUUAAAAAE3SFsPN73wd23s_ApaaBcIKSqJv&amp;co=aHR0cHM6Ly93d3cudGRkZXNpZ24ucm86NDQz&amp;hl=ro&amp;type=image&amp;v=Xh5Zjh8Od10-SgxpI_tcSnHR&amp;theme=light&amp;size=normal&amp;cb=k2wki8xfatq1"></div> -->
-        <div class="form-actions"><button class="webform-submit button-primary btn btn-default form-submit" type="submit" name="op" value="Trimite">Trimite</button>
+        <div class="form-actions">
+            <button class="webform-submit button-primary btn btn-default form-submit" type="submit" name="op" value="Trimite">Trimite</button>
             </div>
         </section>
      <footer>
