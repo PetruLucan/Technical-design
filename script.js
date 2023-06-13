@@ -47,3 +47,47 @@ contactLink.addEventListener('click', function (event) {
     contentSection.style.display = 'none';
     contactSection.style.display = 'block';
 });
+
+
+(function(){
+  const fonts = ["cursive", 'sans-serif', 'serif', 'monospace'];
+  let captchaValue = "";
+  function generateCatcha(){
+    let value = btoa(Math.random()*99999);
+    value = value.substring(0, 7);
+    captchaValue = value;
+  }
+  function setCatcha() {
+    let html = captchaValue.split("").map((char) => {
+      const rotate = -60 + Math.trunc(Math.random() * 120); // Adjust the rotation range here
+      const font = Math.trunc(Math.random() * fonts.length);
+      const fontSize = char.toLowerCase() === char ? 'small' : 'large'; // Check if the character is lowercase or uppercase
+      return `<span 
+        style="
+        transform: rotate(${rotate}deg);
+        font-family: ${fonts[font]};
+        font-size: ${fontSize};
+        "
+      >${char}</span>`;
+    }).join("");
+    document.querySelector(".captcha .preview").innerHTML = html;
+  }
+  function initCaptcha(){
+    document.querySelector(".captcha .captcha-refresh").addEventListener("click", function(){
+      generateCatcha();
+      setCatcha();
+    });
+    generateCatcha();
+      setCatcha();
+  }
+  initCaptcha();
+
+  document.querySelector(".Contact #send-btn").addEventListener("click", function(){
+    let inputCaptchaValue = document.querySelector(".Contact .captcha input").value;
+    if(inputCaptchaValue === captchaValue){
+      swal("", "Mesaj trimis!", "Success");
+    } else {
+      swal("Invalid captcha");
+    };
+  });
+})();
