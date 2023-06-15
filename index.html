@@ -8,6 +8,8 @@
          document.getElementById("contact-section").submit();
        }
      </script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -40,7 +42,7 @@
                 <div class="menu-navigation">
                     <ul class="menu-options">
                         <li class="options-hover">
-                            <a href="acasa" title="Acasa">Acasa</a>
+                            <a href="acasa" id="homePage-link" title="Acasa">Acasa</a>
                         </li>
                         <li class="options-hover">
                             <a href="despre-noi" title="Despre noi">Despre noi</a>
@@ -96,7 +98,7 @@
             </div>
         </div>
      </section>
-     <section id="contact-section" class="Contact" style="display:none;">
+     <section id="contact-section" class="Contact" style="display:none;" >
         <h1>Contact</h1>
         <div class="contact-container">
           <div class="contact-LeftSide">
@@ -134,23 +136,23 @@
           </div>
           <form class="contact-RightSide">
             <div class="form-item">
-              <label class="form-label" for="edit-submitted-nume-prenume">Nume prenume <span class="form-required" title="This field is required.">*</span></label>
-              <input type="text" id="edit-submitted-nume-prenume">
+              <label class="form-label">Nume prenume <span class="form-required" title="This field is required.">*</span></label>
+              <input type="text" id="nume-prenume">
             </div>
       
             <div class="form-item">
-              <label class="form-label" for="edit-submitted-telefon">Telefon <span class="form-required" title="This field is required.">*</span></label>
-              <input type="text" id="edit-submitted-telefon">
+              <label class="form-label">Telefon <span class="form-required" title="This field is required.">*</span></label>
+              <input type="text" id="telefon">
             </div>
       
             <div class="form-item">
-              <label class="form-label" for="edit-submitted-e-mail">E-mail <span class="form-required" title="This field is required.">*</span></label>
-              <input type="email" id="edit-submitted-e-mail">
+              <label class="form-label">E-mail <span class="form-required" title="This field is required.">*</span></label>
+              <input type="email" id="email">
             </div>
       
             <div class="form-item">
-              <label class="form-label" for="edit-submitted-mesaj">Mesaj <span class="form-required" title="This field is required.">*</span></label>
-              <textarea id="edit-submitted-mesaj"></textarea>
+              <label class="form-label">Mesaj <span class="form-required" title="This field is required.">*</span></label>
+              <textarea id="mesaj"></textarea>
             </div>
           </form>
         </div>
@@ -179,9 +181,10 @@
             </button>
           </div>
           <div class="form-input">
-            <button id="send-btn">Trimite</button>
           </div>
         </div>
+        <button type="button" id="send-btn">Trimite</button>
+
       </section>
       
         
@@ -213,6 +216,9 @@
         </div>
      </footer>
  </div>
+ <script>
+
+ </script> 
  <script src="https://cdn.jsdelivr.net/npm/sweetalert@2"></script>
  <script src="script.js"></script>
 </body>

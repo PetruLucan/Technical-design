@@ -41,6 +41,10 @@ document.addEventListener('click', function(event) {
 const contentSection = document.getElementById('content-section');
 const contactSection = document.getElementById('contact-section');
 const contactLink = document.getElementById('contact-link');
+const homePageLink = document.getElementById('homePage-link');
+
+
+const trimiteBtn = document.getElementById('send-btn');
 
 contactLink.addEventListener('click', function (event) {
     event.preventDefault();
@@ -48,6 +52,13 @@ contactLink.addEventListener('click', function (event) {
     contactSection.style.display = 'block';
 });
 
+
+homePageLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    contactSection.style.display = 'none';
+    contentSection.style.display = 'block';
+    
+});
 
 (function(){
   const fonts = ["cursive", 'sans-serif', 'serif', 'monospace'];
@@ -85,9 +96,31 @@ contactLink.addEventListener('click', function (event) {
   document.querySelector(".Contact #send-btn").addEventListener("click", function(){
     let inputCaptchaValue = document.querySelector(".Contact .captcha input").value;
     if(inputCaptchaValue === captchaValue){
-      swal("", "Mesaj trimis!", "Success");
+      swal("", "Mesaj trimis!");
+    sendEmail();
     } else {
       swal("Invalid captcha");
     };
   });
 })();
+
+
+
+function sendEmail(){
+  const numePrenume = document.getElementById('nume-prenume').value;
+const telefon = document.getElementById('telefon').value;
+const email = document.getElementById('email').value;
+const mesaj = document.getElementById('mesaj').value;
+  const formInput = "Nume Prenume: " + numePrenume + "<br/> Telefon: " + telefon + "<br/> Email: " + email + "<br/> Mesaj: " + mesaj;
+  console.log(formInput);
+    Email.send({
+        SecureToken: 'fa5c05bc-aee8-40d3-a67f-ad97e4d7a90b',
+To : 'byteon4@gmail.com',
+From : 'byteon4@gmail.com',
+Subject : "Mesaj primit de pe Technical-Design website",
+Body : formInput
+}).then(
+message => alert(message),
+console.log('message')
+);
+}
