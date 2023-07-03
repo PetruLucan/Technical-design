@@ -22,7 +22,7 @@
 // });
 
 
-const dropdownToggle = document.getElementById('dropdown-toggle');
+const dropdownToggle = document.getElementById('servicesPage-link');
 const dropdownOptions = document.getElementById('dropdown-options');
 const dropdownParent = dropdownToggle.closest('.dropdown');
 
@@ -40,7 +40,7 @@ document.addEventListener('click', function(event) {
 
 const contentSection = document.getElementById('content-section');
 const contactSection = document.getElementById('contact-section');
-const contactLink = document.getElementById('contact-link');
+const contactLink = document.getElementById('contactPage-link');
 const homePageLink = document.getElementById('homePage-link');
 
 
@@ -114,9 +114,9 @@ const mesaj = document.getElementById('mesaj').value;
   const formInput = "Nume Prenume: " + numePrenume + "<br/> Telefon: " + telefon + "<br/> Email: " + email + "<br/> Mesaj: " + mesaj;
   console.log(formInput);
     Email.send({
-        SecureToken: 'fa5c05bc-aee8-40d3-a67f-ad97e4d7a90b',
-To : 'byteon4@gmail.com',
-From : 'byteon4@gmail.com',
+        SecureToken: '450a043c-f2b9-4d01-b7fd-754a59840890',
+To : 'matasa.iulian.pfa@gmail.com',
+From : 'matasa.iulian.pfa@gmail.com',
 Subject : "Mesaj primit de pe Technical-Design website",
 Body : formInput
 }).then(
