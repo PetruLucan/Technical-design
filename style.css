@@ -89,8 +89,8 @@
 /* ^^^   End of Menu styling ^^^ */
 
 
-  .contentTitle {
-    font-size: 24px;
+  h1 {
+    font-size: medium;
     font-weight: bold;
     margin-bottom: 20px;
   }
@@ -101,9 +101,7 @@
   .content-LeftSide {
     flex: 1;
   }
-  .content-RightSide {
-    flex: 2;
-  }
+ 
 .content-RightSide img{
     width: 240px;
     height: 240px;
@@ -112,6 +110,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    flex: 2;
 }
 
 /* ^^^  End of Section Content styling ^^^ */
@@ -270,17 +269,127 @@ footer {
   
 
   /* Mobile responsive */
-  
+
+
 
   @media only screen and (max-width: 600px) {
-    /* ...existing styles... */
-  
-    .content-RightSide img {
+    .page-wrapper{
+      margin: 0 4% 0 4%;
+  }
+  h1{
+    font-size: 18px;
+  }
+    /* Header and Logo Styling */
+    .header-container-LandingPage {
+      margin-top: 40px;
+  }
+  .header-container-HomePage{
       display: block;
-      max-width: 100px;
-      height: 100px;
-      margin-bottom: 10px;
-    }
+  }
+  .logo img{
+      height: 70px;
+      width: 70px;
+  }
+  .logo-slogane-container{
+      display: block;
+      text-align: center;
+      font-size: medium;
+  }
+  .contact-details{
+    display: none;
+  }
+/* Menu styling */
+
+
   
-    /* ...existing styles... */
+ nav.Menu {
+    margin:50px 0px 50px 0px;
+    background-color: #e2dddd;
+}
+  .menu-options {
+    padding: 0;
+    /* font-size: 20px; */
+  }
+  #homePage-link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  #aboutUs-link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+   #servicesPage-link:hover {
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+    text-decoration: underline;
+  }
+  #contactPage-link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  #dropdown-options {
+    width: 140px;
+    top: 100%;
+    left: -35%;
+    transform: translateY(100%);
+  }
+  
+  .dropdown.show #servicesPage-link {
+    transform: translateY(-50%);
+    display: block;
+  }
+  
+
+/* Content container styling */
+
+    .content-container {
+      display: block;
+      justify-content: space-between;
+    }
+    .content-LeftSide {
+      flex: 2;
+    }
+    .content-RightSide{
+      flex: 1;
+      display: block;
+      justify-content: space-evenly;
+      flex-direction: row;
+  }
+  .content-RightSide img{
+      width: 150px;
+      height: 150px;
+      margin: 10px 0px 20px 10px
+  }
+  
+  /* Contact container styling */
+  .contact-container{
+    display: block;
+    /* justify-content: space-evenly; */
+  }
+  .contact-RightSide{
+    margin: 40px 0px 20px 0px;
+  }
+  .form-info{
+    font-size: small;
+  }
+.checkbox{
+  font-size: small;
+}
+.captcha{
+  width: 60%;
+  transform: translate(35%);
+}
+section#contact-section #send-btn{
+  left:40%
+}
+.footer-container{
+  font-size: small;
+}
+.LegalStuff ul li{
+  margin: 5px 0 5px 0;
+}
+
+
+
   }
